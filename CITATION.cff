@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or dataset, please cite it as below."
+title: "Two-Layer Agentic AI Security via Tool-Call Mediation and Behavioural Anomaly Detection"
+authors:
+  - family-names: Giri
+    given-names: Sanil
+    affiliation: University of the West of Scotland
+date-released: 2027-01-10
+license: MIT
+type: software

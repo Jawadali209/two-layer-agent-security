@@ -1,0 +1,13 @@
+# Versions used for the reported results (Google Colab, Python 3.13)
+agentdojo==0.1.35
+shap==0.54.1
+scikit-learn==1.6.1
+numpy==2.4.6
+pandas==2.2.3
+scipy
+matplotlib
+pyyaml
+joblib
+# to execute the notebooks outside Colab
+jupyter
+nbconvert

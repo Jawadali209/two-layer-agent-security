@@ -1,0 +1,17 @@
+split,suite,config,attack_success_rate_%,benign_utility_%,utility_under_attack_%
+heldout_env,slack,both,9.5,47.6,10.5
+heldout_env,slack,layer1,9.5,47.6,11.4
+heldout_env,slack,layer2,44.8,66.7,34.3
+heldout_env,slack,none,57.1,66.7,48.6
+test,banking,both,0.0,40.0,40.0
+test,banking,layer1,0.0,20.0,20.0
+test,banking,layer2,15.6,40.0,40.0
+test,banking,none,24.4,20.0,20.0
+test,travel,both,2.4,66.7,52.4
+test,travel,layer1,2.4,66.7,52.4
+test,travel,layer2,7.1,66.7,52.4
+test,travel,none,9.5,66.7,52.4
+test,workspace,both,0.0,75.0,54.2
+test,workspace,layer1,0.0,75.0,54.2
+test,workspace,layer2,15.3,91.7,61.1
+test,workspace,none,20.8,91.7,61.1

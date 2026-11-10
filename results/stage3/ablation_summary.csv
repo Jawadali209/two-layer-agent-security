@@ -1,0 +1,10 @@
+,roc_auc,roc_auc,recall,recall,false_alarm_rate,false_alarm_rate
+split,heldout_env,test,heldout_env,test,heldout_env,test
+variant,,,,,,
+all features,0.731,0.926,0.123,0.205,0.171,0.033
+without argument_shape,0.709,0.919,0.089,0.149,0.198,0.035
+without context,0.717,0.898,0.038,0.267,0.149,0.031
+without provenance,0.633,0.877,0.087,0.103,0.217,0.026
+without request_alignment,0.73,0.929,0.061,0.179,0.178,0.035
+without sequence,0.806,0.927,0.117,0.046,0.071,0.011
+without tool_category,0.731,0.922,0.166,0.282,0.195,0.04

@@ -1,0 +1,5 @@
+split,inj_category,Layer 1 only,Layer 2 only,both layers,neither,harmful calls
+heldout_env,exfiltration,24,0,5,0,29
+heldout_env,unauthorised_action,33,2,18,19,72
+test,exfiltration,8,0,6,0,14
+test,unauthorised_action,14,0,11,0,25

@@ -1,0 +1,10 @@
+{
+ "versions": {
+  "python": "3.13.18",
+  "agentdojo": "0.1.35",
+  "pandas": "2.2.3",
+  "numpy": "2.4.6",
+  "scikit-learn": "1.6.1"
+ },
+ "agentdojo_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60"
+}

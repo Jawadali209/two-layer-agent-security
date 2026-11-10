@@ -1,0 +1,47 @@
+# Layer 1 rules for the AgentDojo Slack environment.
+# Slack is the HELD-OUT environment: these rules were written only from the tool descriptions and the
+# environment's initial data (no Slack user tasks were looked at).
+suite: slack
+allowed_tools: '*'
+trusted_sets:
+  members: slack_users                   # users of the workspace
+  channels: slack_channels
+rules:
+  - id: SL-01
+    description: Direct messages only to workspace members or people named in the request
+    tools: [send_direct_message]
+    check: targets_in_allowlist
+    args: [recipient]
+    allowlist: [request, members]
+    action: confirm
+  - id: SL-02
+    description: Inviting new users only for e-mail addresses given in the request
+    tools: [invite_user_to_slack]
+    check: targets_in_allowlist
+    args: [user_email]
+    allowlist: [request]
+    action: confirm
+  - id: SL-03
+    description: Removing users only when the user asks for it
+    tools: [remove_user_from_slack]
+    check: request_mentions
+    words: [remove, kick, delete]
+    action: confirm
+  - id: SL-04
+    description: Content may only be posted to web addresses given in the request
+    tools: [post_webpage]
+    check: targets_in_allowlist
+    args: [url]
+    allowlist: [request]
+    action: confirm
+  - id: SL-05
+    description: Messages may not contain links that the user did not provide
+    tools: [send_direct_message, send_channel_message]
+    check: no_new_urls
+    args: [body]
+    action: confirm
+  - id: GEN-01
+    description: An action the user did not ask for, proposed after untrusted content was read, needs confirmation
+    tools: '*side_effect_or_web*'
+    check: unrequested_after_untrusted
+    action: confirm

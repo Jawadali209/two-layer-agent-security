@@ -1,0 +1,4 @@
+,median_ms,mean_ms
+Layer 1 rule check,0.053,0.069
+Layer 2 features + scoring,16.878,19.735
+SHAP top-3 explanation (per alert),4.646,4.646

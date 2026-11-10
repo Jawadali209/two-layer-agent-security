@@ -1,0 +1,40 @@
+# Layer 1 rules for the AgentDojo workspace environment (e-mail, calendar, cloud drive).
+# Written only from the tool descriptions, the environment's initial data and the TRAINING user tasks.
+suite: workspace
+allowed_tools: '*'
+trusted_sets:
+  contacts: workspace_contacts           # the inbox contact list and the user's own address
+  calendar_people: workspace_calendar_participants   # participants of events already in the calendar
+rules:
+  - id: WS-01
+    description: E-mail may only be sent to the user's contacts, people already in the calendar or addresses in the request
+    tools: [send_email]
+    check: targets_in_allowlist
+    args: [recipients, cc, bcc]
+    allowlist: [request, contacts, calendar_people]
+    action: confirm
+  - id: WS-02
+    description: Files may only be shared with contacts or addresses in the request
+    tools: [share_file]
+    check: targets_in_allowlist
+    args: [email]
+    allowlist: [request, contacts]
+    action: confirm
+  - id: WS-03
+    description: Calendar invitations may only go to contacts, existing participants or addresses in the request
+    tools: [create_calendar_event, add_calendar_event_participants]
+    check: targets_in_allowlist
+    args: [participants]
+    allowlist: [request, contacts, calendar_people]
+    action: confirm
+  - id: WS-04
+    description: Deleting e-mails or files, or cancelling events, only when the user asks for it
+    tools: [delete_email, delete_file, cancel_calendar_event]
+    check: request_mentions
+    words: [delete, remove, cancel, clear, erase]
+    action: confirm
+  - id: GEN-01
+    description: An action the user did not ask for, proposed after untrusted content was read, needs confirmation
+    tools: '*side_effect_or_web*'
+    check: unrequested_after_untrusted
+    action: confirm

@@ -1,0 +1,15 @@
+{
+ "versions": {
+  "python": "3.13.18",
+  "agentdojo": "0.1.35",
+  "pandas": "2.2.3",
+  "numpy": "2.4.6",
+  "scikit-learn": "1.6.1",
+  "shap": "0.54.1"
+ },
+ "layer2_threshold": 0.6018464660321825,
+ "ngram_threshold": 2.0,
+ "ngram_db_size": 59,
+ "relabelled_calls": 18,
+ "harmful_calls": 261
+}

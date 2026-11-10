@@ -1,0 +1,3 @@
+k,alerts,score_fell_pct,mean_score,mean_score_top_removed,mean_score_random_removed,alert_cleared_top_pct,alert_cleared_random_pct
+1,193,100.0,0.635,0.595,0.633,64.249,4.275
+3,193,100.0,0.635,0.526,0.631,100.0,8.238
